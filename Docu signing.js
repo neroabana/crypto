@@ -1,4 +1,5 @@
   <script type="text/javascript">
+  
   let signature;
   
   const msgEncoding = () => {
