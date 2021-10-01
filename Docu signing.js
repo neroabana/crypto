@@ -11,11 +11,13 @@
 
   const signDoc = async (privateKey) => {   
     let encoded = msgEncoding();
+    
     signature = await window.crypto.subtle.sign(
       "RSASSA-PKCS1-v1_5",
         privateKey,
         encoded
-      );      
+      );
+      
     document.querySelector("#result").innerHTML = new Uint8Array(signature); 
     console.log(new Uint8Array(signature));
   } 
